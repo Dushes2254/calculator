@@ -72,6 +72,5 @@ document.querySelector('.buttons').onclick = (e) => {
     }
     finish = true
     out.textContent = a
-    console.log(a, b, sign)
   }
 }
