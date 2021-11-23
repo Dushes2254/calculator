@@ -8,7 +8,7 @@ window.addEventListener('load', async () => {
     }
   }
 
-  let a = ''
+  /* let a = ''
   let b = ''
   let sign = ''
   let finish = false
@@ -83,5 +83,5 @@ window.addEventListener('load', async () => {
       finish = true
       out.textContent = a
     }
-  }
+  } */
 })
