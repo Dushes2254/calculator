@@ -1,14 +1,12 @@
 const staticCacheName = 's-app-v1'
-const assetUrls = ['./index.html', './script.js', './style.css']
+const assetUrls = ['index.html', 'script.js', 'style.css']
 
 self.addEventListener('install', async (event) => {
-  console.log(1)
   const cache = await caches.open(staticCacheName)
   await cache.addAll(assetUrls)
 })
 
 self.addEventListener('activate', async (event) => {
-  console.log(2)
   const cacheNames = await caches.keys()
   await Promise.all(
     cacheNames
@@ -18,12 +16,11 @@ self.addEventListener('activate', async (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
-  console.log(3)
   event.respondWith(cacheFirst(event.request))
 })
 
 async function cacheFirst(request) {
-  console.log(4)
   const cached = await caches.match(request)
-  return cached ?? (await fetch(request))
+  // return cached ?? (await fetch(request))
+  return cached ?? console.log('hello')
 }
