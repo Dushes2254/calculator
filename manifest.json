@@ -6,7 +6,7 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/icons/android-icon-72x72.png",
+      "src": "./icons/android-icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "density": "1.5"
