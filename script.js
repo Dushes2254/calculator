@@ -1,12 +1,12 @@
 window.addEventListener('load', async () => {
-  // if (navigator.serviceWorker) {
-  //   try {
-  //     const reg = await navigator.serviceWorker.register('/sw.js')
-  //     // console.log(reg)
-  //   } catch (e) {
-  //     console.log('fail')
-  //   }
-  // }
+  if (navigator.serviceWorker) {
+    try {
+      const reg = await navigator.serviceWorker.register('/sw.js')
+      console.log(reg)
+    } catch (e) {
+      console.log('fail')
+    }
+  }
   let a = ''
   let b = ''
   let sign = ''
